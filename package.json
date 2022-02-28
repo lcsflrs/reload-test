@@ -1,0 +1,27 @@
+{
+  "name": "reload-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsnd --respawn -- --transpileOnly index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-migration": "knex migrate:latest",
+    "run-seed": "knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "knex": "^1.0.3",
+    "mysql": "^2.18.1",
+    "objection": "^3.0.1",
+    "restify": "^8.6.1",
+    "typescript": "4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "ts-node-dev": "^1.1.8"
+  }
+}
