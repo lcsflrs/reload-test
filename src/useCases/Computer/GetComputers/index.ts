@@ -1,8 +1,11 @@
 import { ComputerRepository } from "../../../repositories/ComputerRepository";
+import { Repository } from "../../../repositories/Repository";
 import { GetComputersController } from "./GetComputersController";
 import { GetComputersUseCase } from "./GetComputersUseCase";
 
-const computerRepository = ComputerRepository.getInstance();
+const computerRepository = Repository.getRepositoryInstance(
+  "computer"
+) as ComputerRepository;
 
 const getComputerUseCase = new GetComputersUseCase(computerRepository);
 

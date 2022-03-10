@@ -1,8 +1,11 @@
 import { ContributorRepository } from "../../../repositories/ContributorRepository";
+import { Repository } from "../../../repositories/Repository";
 import { GetContributorByCompanyController } from "./GetContributorByCompanyController";
 import { GetContributorByCompanyUseCase } from "./GetContributorByCompanyUseCase";
 
-const contributorRepository = ContributorRepository.getInstance();
+const contributorRepository = Repository.getRepositoryInstance(
+  "contributor"
+) as ContributorRepository;
 
 const getContributorByCompanyUseCase = new GetContributorByCompanyUseCase(
   contributorRepository

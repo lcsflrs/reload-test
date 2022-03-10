@@ -1,8 +1,11 @@
 import { ContributorRepository } from "../../../repositories/ContributorRepository";
+import { Repository } from "../../../repositories/Repository";
 import { GetContributorsController } from "./GetContributorsController";
 import { GetContributorsUseCase } from "./GetContributorsUseCase";
 
-const contributorRepository = ContributorRepository.getInstance();
+const contributorRepository = Repository.getRepositoryInstance(
+  "contributor"
+) as ContributorRepository;
 
 const getContributorUseCase = new GetContributorsUseCase(contributorRepository);
 
