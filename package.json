@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "dev": "tsnd --respawn -- --transpileOnly index.ts",
+    "dev": "tsnd --respawn --transpile-only --inspect=0.0.0.0:9229 --ignore-watch node_modules index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "run-migration": "knex migrate:latest",
     "run-seed": "knex seed:run"
@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
+    "@types/restify": "^8.5.4",
+    "ts-node": "^10.7.0",
     "ts-node-dev": "^1.1.8"
   }
 }

@@ -13,7 +13,8 @@ export async function up({ schema }: Knex): Promise<any> {
       .notNullable()
       .unsigned()
       .references("id")
-      .inTable("company");
+      .inTable("company")
+      .onDelete("CASCADE");
   });
 }
 

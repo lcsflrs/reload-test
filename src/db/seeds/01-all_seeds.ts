@@ -1,7 +1,7 @@
 import { PartialModelGraph } from "objection";
+import Company from "../../models/Company";
+import Desktop from "../../models/Desktop";
 import { bindModels } from "../../utils/objection";
-import Company from "../models/Company";
-import Desktop from "../models/Desktop";
 
 export async function seed(): Promise<any> {
   bindModels();
