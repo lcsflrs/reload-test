@@ -12,7 +12,9 @@ export class ComputerRepository implements IComputerRepository {
   static instance: ComputerRepository;
 
   private constructor() {
-    console.log("Singleton: ComputerRepository constructor called!");
+    console.log(
+      "Singleton Design Pattern: ComputerRepository constructor called!"
+    );
   }
 
   public static getInstance(): ComputerRepository {
@@ -47,7 +49,6 @@ export class ComputerRepository implements IComputerRepository {
       throw new Error("Computer not found");
     }
 
-    console.log("findComputer", findComputer);
     await Desktop.query().where("id", id).del();
     return;
   }

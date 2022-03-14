@@ -14,7 +14,9 @@ export class ContributorRepository implements IContributorRepository {
   static instance: ContributorRepository;
 
   private constructor() {
-    console.log("Singleton: ContributorRepository constructor called!");
+    console.log(
+      "Singleton Design Pattern: ContributorRepository constructor called!"
+    );
   }
 
   public static getInstance(): ContributorRepository {

@@ -5,7 +5,7 @@ require("dotenv").config();
 const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE } = process.env;
 
 const connection = {
-  host: DB_HOST,
+  host: "db",
   user: DB_USER,
   password: DB_PASSWORD,
   database: DB_DATABASE,

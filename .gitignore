@@ -134,3 +134,4 @@ Pods
 temp/
 generated/
 package-lock.json
+*.aof
