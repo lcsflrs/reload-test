@@ -1,3 +1,54 @@
-Em caso de problemas com o knex, rodar:
+# Reload back-end test
 
-npm install ts-node --save-dev
+This is my implementation for the test.
+
+## Pre-requisites
+
+You must have Docker and Docker Compose installaed.
+
+## Stack
+- NodeJS `14-alpine` (using `TypeScript`)
+- MySQL `5.7`
+- Restify
+- Knex
+- Jest
+- Redis
+- Docker
+- Docker Compose
+
+
+## Details
+
+The api contains these routes:
+- companies
+    - GET all
+    - GET one by id
+    - GET one by name
+    - UPDATE its partial information (name, suffix etc)
+    - DELETE it
+- computers
+    - GET all
+    - GET all contained in one company
+    - CREATE
+    - DELETE
+- contributors
+    - GET all
+    - GET all contained in one company
+    - CREATE
+    - UPDATE its partial information (age, jobTitle etc)
+    - DELETE
+
+You can test each one in Insomnia (use insomnia_backup.json file)
+
+The dataset id conflicts was solved by inserting all companies reindexing the id with auto-increment.
+
+## Initializing
+
+To start the api, run:
+
+```
+docker-compose up
+```
+
+
+
