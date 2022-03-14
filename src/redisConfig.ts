@@ -1,8 +1,6 @@
 import Redis from "ioredis";
 import { promisify } from "util";
 
-// TODO adicionar configurações do redis
-// * remover consoles logs e comentários
 const redisClient = new Redis({
   host: "redis",
   port: 6379,

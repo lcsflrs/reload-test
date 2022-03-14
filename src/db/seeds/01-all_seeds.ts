@@ -8,9 +8,6 @@ export async function seed(): Promise<any> {
 
   const jsonData: Company[] = require("./dataset.json");
 
-  // console.log(jsonData[0])
-  // return;
-
   const companiesData = jsonData.map((data): PartialModelGraph<Company> => {
     const {
       bs_company_statement,
@@ -59,35 +56,4 @@ export async function seed(): Promise<any> {
   });
 
   await Company.query().insertGraph(companiesData);
-
-  // await Company.query().insertGraph({
-  //   bs_company_statement: "asd",
-  //   business_name: "asd",
-  //   catch_phrase: "asd",
-  //   full_address: "asd",
-  //   industry: "asd",
-  //   latitute: "asd",
-  //   logo: "asd",
-  //   longitude: "asd",
-  //   phone_number: "asd",
-  //   suffix: "asd",
-  //   type: "asd",
-  //   contributors: [
-  //     {
-  //       firstName: "asd",
-  //       lastName: "asd",
-  //       title: "asd",
-  //       jobTitle: "asd",
-  //       age: 25,
-  //     },
-  //   ],
-  //   desktops: [
-  //     {
-  //       ip: "asd",
-  //       os: "asd",
-  //       platform: "asd",
-  //       type: "asd",
-  //     },
-  //   ],
-  // });
 }

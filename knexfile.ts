@@ -22,7 +22,6 @@ const defaults: Knex.Config = {
   },
   useNullAsDefault: true,
   debug: false,
-  // ...knexSnakeCaseMappers(),
 };
 
 export const development = {

@@ -51,7 +51,6 @@ export class ContributorRepository implements IContributorRepository {
     return;
   }
 
-  // TODO verificar o motivo de demorar muito
   async delete(id: number): Promise<void> {
     const findContributor = await Contributor.query().findById(id);
     if (!findContributor) {

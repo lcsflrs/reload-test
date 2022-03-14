@@ -42,7 +42,6 @@ export class ComputerRepository implements IComputerRepository {
     return;
   }
 
-  // TODO verificar o motivo de demorar muito
   async delete(id: number): Promise<void> {
     const findComputer = await Desktop.query().findById(id);
     if (!findComputer) {
