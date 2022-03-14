@@ -22,10 +22,10 @@ You must have Docker and Docker Compose installaed.
 The api contains these routes:
 - companies
     - GET all
-    - GET one by id
-    - GET one by name
-    - UPDATE its partial information (name, suffix etc)
-    - DELETE it
+    - GET one by id (Redis)
+    - GET one by name (Redis)
+    - UPDATE its partial information (name, suffix etc) (Redis)
+    - DELETE it (Redis)
 - computers
     - GET all
     - GET all contained in one company
