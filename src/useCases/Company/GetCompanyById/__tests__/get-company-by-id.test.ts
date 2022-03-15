@@ -3,7 +3,7 @@ import { GetCompanyByIdController } from "../GetCompanyByIdController";
 import { GetCompanyByIdUseCase } from "../GetCompanyByIdUseCase";
 import { GetCompanyByIdUseCaseMock } from "../__mocks__/GetCompanyByIdUseCaseMock";
 
-describe("GetCompanyById", () => {
+describe("In GetCompanyById", () => {
   const request = require("supertest");
   const restify = require("restify");
   const app = restify.createServer();

@@ -2,8 +2,8 @@ import { GetCompanyByIdController } from "../GetCompanyByIdController";
 import { GetCompanyByIdUseCase } from "../GetCompanyByIdUseCase";
 import { GetCompanyByIdUseCaseMock } from "../__mocks__/GetCompanyByIdUseCaseMock";
 
-describe("GetCompanyById", () => {
-  it("should call getCompanyByIdUseCase.execute", () => {
+describe("In GetCompanyById", () => {
+  it("should call execute in getCompanyByIdUseCase", () => {
     const getCompanyByIdUseCase = new GetCompanyByIdUseCaseMock();
     const executeSpy = jest.spyOn(getCompanyByIdUseCase, "execute");
 
