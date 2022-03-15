@@ -10,10 +10,8 @@ describe("GetCompanyById", () => {
 
   const getCompanyByIdUseCase = new GetCompanyByIdUseCaseMock();
 
-  const mock = getCompanyByIdUseCase as any;
-
   const getCompanyByIdController = new GetCompanyByIdController(
-    mock as GetCompanyByIdUseCase
+    getCompanyByIdUseCase as GetCompanyByIdUseCase
   );
 
   app.get(
