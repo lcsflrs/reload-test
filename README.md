@@ -11,6 +11,7 @@ You must have Docker and Docker Compose installaed.
 - MySQL `5.7`
 - Restify
 - Knex
+- Objetcion
 - Jest
 - Redis
 - Docker
@@ -22,10 +23,10 @@ You must have Docker and Docker Compose installaed.
 The api contains these routes:
 - companies
     - GET all
-    - GET one by id
-    - GET one by name
-    - UPDATE its partial information (name, suffix etc)
-    - DELETE it
+    - GET one by id (Redis)
+    - GET one by name (Redis)
+    - UPDATE its partial information (name, suffix etc) (Redis)
+    - DELETE it (Redis)
 - computers
     - GET all
     - GET all contained in one company
@@ -41,6 +42,8 @@ The api contains these routes:
 You can test each one in Insomnia (use insomnia_backup.json file)
 
 The dataset id conflicts was solved by inserting all companies reindexing the id with auto-increment.
+
+The tests was implemented on src/useCases/Company/GetCompanyById.
 
 ## Initializing
 
