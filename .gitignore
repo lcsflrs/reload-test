@@ -133,5 +133,4 @@ buck-out/
 Pods
 temp/
 generated/
-package-lock.json
 *.aof
