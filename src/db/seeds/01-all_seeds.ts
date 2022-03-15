@@ -6,6 +6,13 @@ import { bindModels } from "../../utils/objection";
 export async function seed(): Promise<any> {
   bindModels();
 
+  const thereAreCompanies = await Company.query().first(); // ? Verificating if there are companies to avoid inserting duplicated data
+
+  if (thereAreCompanies) {
+    console.log("There are companies in the database, skipping seed.");
+    return;
+  }
+
   const jsonData: Company[] = require("./dataset.json");
 
   const companiesData = jsonData.map((data): PartialModelGraph<Company> => {
