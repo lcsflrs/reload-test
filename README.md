@@ -16,6 +16,7 @@ You must have Docker and Docker Compose installaed.
 - Redis
 - Docker
 - Docker Compose
+- Github Actions
 
 
 ## Details
