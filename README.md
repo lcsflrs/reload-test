@@ -43,6 +43,8 @@ You can test each one in Insomnia (use insomnia_backup.json file)
 
 The dataset id conflicts was solved by inserting all companies reindexing the id with auto-increment.
 
+The tests was implemented on src/useCases/Company/GetCompanyById.
+
 ## Initializing
 
 To start the api, run:
