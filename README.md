@@ -4,14 +4,14 @@ This is my implementation for the test.
 
 ## Pre-requisites
 
-You must have Docker and Docker Compose installaed.
+You must have Docker and Docker Compose installed.
 
 ## Stack
 - NodeJS `14-alpine` (using `TypeScript`)
 - MySQL `5.7`
 - Restify
 - Knex
-- Objetcion
+- Objection
 - Jest
 - Redis
 - Docker
@@ -24,10 +24,10 @@ You must have Docker and Docker Compose installaed.
 The api contains these routes:
 - companies
     - GET all
-    - GET one by id (Redis)
-    - GET one by name (Redis)
-    - UPDATE its partial information (name, suffix etc) (Redis)
-    - DELETE it (Redis)
+    - GET one by id *
+    - GET one by name *
+    - UPDATE its partial information (name, suffix etc) *
+    - DELETE it *
 - computers
     - GET all
     - GET all contained in one company
@@ -39,6 +39,8 @@ The api contains these routes:
     - CREATE
     - UPDATE its partial information (age, jobTitle etc)
     - DELETE
+
+* Use Redis
 
 You can test each one in Insomnia (use insomnia_backup.json file)
 
