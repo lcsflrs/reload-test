@@ -40,7 +40,7 @@ The api contains these routes:
     - UPDATE its partial information (age, jobTitle etc)
     - DELETE
 
-* Use Redis
+\* Using Redis
 
 You can test each one in Insomnia (use insomnia_backup.json file)
 
