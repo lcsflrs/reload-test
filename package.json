@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "tsnd --respawn --transpile-only --inspect=0.0.0.0:9229 --ignore-watch node_modules index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles --forceExit --runInBand --no-cache",
     "run-migration": "knex migrate:latest",
     "run-seed": "knex seed:run"
   },
@@ -22,9 +22,16 @@
     "typescript": "4.5.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/ioredis": "^4.28.8",
+    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.21",
     "@types/restify": "^8.5.4",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2",
     "ts-node": "^10.7.0",
     "ts-node-dev": "^1.1.8"
   }
