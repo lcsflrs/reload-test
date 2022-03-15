@@ -11,6 +11,7 @@ You must have Docker and Docker Compose installaed.
 - MySQL `5.7`
 - Restify
 - Knex
+- Objetcion
 - Jest
 - Redis
 - Docker
