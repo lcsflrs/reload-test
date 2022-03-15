@@ -1,4 +1,5 @@
 import Desktop from "../models/Desktop";
+import { removeRedis } from "../redisConfig";
 import { ICreateComputerDTO } from "../useCases/Computer/CreateComputer/CreateComputerDTO";
 
 export interface IComputerRepository {
@@ -39,6 +40,7 @@ export class ComputerRepository implements IComputerRepository {
 
   async save(data: ICreateComputerDTO): Promise<void> {
     await Desktop.query().insert(data);
+    await removeRedis(`company:${data.companyId}`);
     return;
   }
 
@@ -48,6 +50,7 @@ export class ComputerRepository implements IComputerRepository {
       throw new Error("Computer not found");
     }
 
+    await removeRedis(`company:${findComputer.company_id}`);
     await Desktop.query().where("id", id).del();
     return;
   }

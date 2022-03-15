@@ -15,11 +15,6 @@ import { getContributorController } from "./useCases/Contributor/GetContributors
 import { updateContributorController } from "./useCases/Contributor/UpdateContributor";
 
 function routes(server: restify.Server) {
-  server.get("/", (req, res, next) => {
-    res.send(200, "Hello World! aaa");
-    return next();
-  });
-
   /**
    * * Company
    */

@@ -1,4 +1,5 @@
 import Contributor from "../models/Contributor";
+import { removeRedis } from "../redisConfig";
 import { ICreateContributorDTO } from "../useCases/Contributor/CreateContributor/CreateContributorDTO";
 import { IUpdateContributorDTO } from "../useCases/Contributor/UpdateContributor/UpdateContributorDTO";
 
@@ -48,6 +49,8 @@ export class ContributorRepository implements IContributorRepository {
       age: data.age,
       company_id: data.companyId,
     });
+
+    await removeRedis(`company:${data.companyId}`);
     return;
   }
 
@@ -57,6 +60,7 @@ export class ContributorRepository implements IContributorRepository {
       throw new Error("Contributor not found");
     }
 
+    await removeRedis(`company:${findContributor.company_id}`);
     await Contributor.query().where("id", id).del();
     return;
   }
@@ -79,6 +83,8 @@ export class ContributorRepository implements IContributorRepository {
     if (!contributor) {
       throw new Error("Contributor not found");
     }
+
+    await removeRedis(`company:${contributor.company_id}`);
     return contributor;
   }
 }
